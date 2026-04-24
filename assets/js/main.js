@@ -146,11 +146,11 @@
 			$window
 				.on('keyup', function(event) {
 
-					if (event.keyCode == "Escape"
-					&&	$body.hasClass('content-active'))
-					&& !$(event.target).is('input, textarea')) {
-
-						$panels.trigger('---hide');
+					if (event.keyCode == "Escape" && $$body.hasClass('content-active')) {
+						event.preventDefault();
+						event.stopPropagation();
+						$panels.trigger('--hide'):
+				
 
 					}
 
