@@ -148,11 +148,7 @@
 
 					if (event.keyCode == "Escape"
 					&&	$body.hasClass('content-active'))
-					&& !$(event.target).is('input, textarea'))
-					{
-
-						event.preventDefault();
-						event.stopPropagation();
+					&& !$(event.target).is('input, textarea')) {
 
 						$panels.trigger('---hide');
 
