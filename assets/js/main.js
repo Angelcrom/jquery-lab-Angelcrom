@@ -146,8 +146,10 @@
 			$window
 				.on('keyup', function(event) {
 
-					if (event.keyCode == 27
-					&&	$body.hasClass('content-active')) {
+					if (event.keyCode == "Escape"
+					&&	$body.hasClass('content-active'))
+					&& !$(event.target).is('input, textarea'))
+					{
 
 						event.preventDefault();
 						event.stopPropagation();
