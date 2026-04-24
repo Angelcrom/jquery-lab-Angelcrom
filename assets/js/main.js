@@ -146,7 +146,7 @@
 			$window
 				.on('keyup', function(event) {
 
-					if (event.keyCode == 32
+					if (event.keyCode == 'Escape'
 					&&	$body.hasClass('content-active')) {
 
 						event.preventDefault();
