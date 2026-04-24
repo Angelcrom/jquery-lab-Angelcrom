@@ -272,6 +272,14 @@
 				windowMargin: 50
 			});
 
+				$(document).on('mousedown', '.poptrox-popup .closer', function(e) {
+				    if (!confirm('Are you sure?')) {
+				        e.preventDefault();
+				        e.stopPropagation();
+				        return false;
+				    }
+				});
+
 			// Hack: Set margins to 0 when 'xsmall' activates.
 				breakpoints.on('<=xsmall', function() {
 					$main[0]._poptrox.windowMargin = 0;
