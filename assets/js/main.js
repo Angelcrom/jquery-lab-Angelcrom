@@ -69,7 +69,10 @@
 			// Closer.
 				$closer
 					.on('click', function(event) {
-						$this.trigger('---hide');
+
+						if (confirm('Are you sure?')) {
+							$this.trigger('---hide');
+						}
 					});
 
 			// Events.
